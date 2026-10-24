@@ -1,0 +1,136 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Oerre Ghost proxy",
+        "description": "Home Assistant listens for the Ghost units and forwards their traffic to the Oerre cloud, so the O.Tech app keeps working. Point app-oerre.it to this Home Assistant in your router's local DNS.",
+        "data": {
+          "listen_port": "Listen port for units",
+          "upstream_host": "Oerre cloud host or IP (empty = local only)",
+          "upstream_port": "Oerre cloud port",
+          "app_port": "O.Tech app pass-through port (0 = off)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Already configured"
+    }
+  },
+  "entity": {
+    "fan": {
+      "ventilation": {
+        "name": "Ventilation",
+        "state_attributes": {
+          "preset_mode": {
+            "state": {
+              "smart": "Smart",
+              "auto": "Auto",
+              "manual": "Manual heat recovery",
+              "night": "Night",
+              "away": "Away home",
+              "surveillance": "Surveillance",
+              "timed_extraction": "Timed extraction",
+              "extraction": "Extraction",
+              "intake": "Intake",
+              "master_slave": "Master-slave flow",
+              "slave_master": "Slave-master flow"
+            }
+          }
+        }
+      }
+    },
+    "select": {
+      "mode": {
+        "name": "Mode",
+        "state": {
+          "smart": "Smart",
+          "auto": "Auto",
+          "manual": "Manual heat recovery",
+          "night": "Night",
+          "away": "Away home",
+          "surveillance": "Surveillance",
+          "timed_extraction": "Timed extraction",
+          "extraction": "Extraction",
+          "intake": "Intake",
+          "master_slave": "Master-slave flow",
+          "slave_master": "Slave-master flow",
+          "off": "Off"
+        }
+      },
+      "humidity_threshold": {
+        "name": "Humidity threshold",
+        "state": {
+          "low": "Low",
+          "medium": "Medium",
+          "high": "High"
+        }
+      },
+      "twilight_sensor": {
+        "name": "Twilight sensor",
+        "state": {
+          "off": "Off",
+          "low": "Low",
+          "high": "High"
+        }
+      }
+    },
+    "sensor": {
+      "temperature": {
+        "name": "Temperature"
+      },
+      "humidity": {
+        "name": "Humidity"
+      },
+      "active_mode": {
+        "name": "Active mode",
+        "state": {
+          "smart": "Smart",
+          "auto": "Auto",
+          "manual": "Manual heat recovery",
+          "night": "Night",
+          "away": "Away home",
+          "surveillance": "Surveillance",
+          "timed_extraction": "Timed extraction",
+          "extraction": "Extraction",
+          "intake": "Intake",
+          "master_slave": "Master-slave flow",
+          "slave_master": "Slave-master flow",
+          "off": "Off"
+        }
+      },
+      "air_quality_raw": {
+        "name": "Air quality raw byte"
+      },
+      "raw_status": {
+        "name": "Raw status"
+      },
+      "filter": {
+        "name": "Filter",
+        "state": {
+          "ok": "OK",
+          "warning": "Check soon",
+          "replace": "Replace"
+        }
+      },
+      "air_quality": {
+        "name": "Air quality",
+        "state": {
+          "very_good": "Very good",
+          "good": "Good",
+          "medium": "Medium",
+          "poor": "Poor"
+        }
+      }
+    },
+    "binary_sensor": {
+      "connected": {
+        "name": "Connected"
+      }
+    },
+    "button": {
+      "reset_filter": {
+        "name": "Reset filter"
+      }
+    }
+  }
+}

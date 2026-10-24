@@ -1,0 +1,136 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Oerre Ghost proxy",
+        "description": "Home Assistant võtab rekuperaatorite ühendused vastu ja edastab need Oerre pilve, nii et O.Tech äpp jääb tööle. Suuna ruuteri kohalikus DNS-is app-oerre.it sellele Home Assistantile.",
+        "data": {
+          "listen_port": "Kuulamise port",
+          "upstream_host": "Oerre pilve aadress või IP (tühi = ainult kohalik)",
+          "upstream_port": "Oerre pilve port",
+          "app_port": "O.Tech äpi läbilaskeport (0 = väljas)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Juba seadistatud"
+    }
+  },
+  "entity": {
+    "fan": {
+      "ventilation": {
+        "name": "Ventilatsioon",
+        "state_attributes": {
+          "preset_mode": {
+            "state": {
+              "smart": "Smart",
+              "auto": "Automaatne",
+              "manual": "Käsitsi soojustagastus",
+              "night": "Öö",
+              "away": "Kodust ära",
+              "surveillance": "Valve",
+              "timed_extraction": "Ajastatud väljatõmme",
+              "extraction": "Väljatõmme",
+              "intake": "Sissepuhe",
+              "master_slave": "Master-slave vool",
+              "slave_master": "Slave-master vool"
+            }
+          }
+        }
+      }
+    },
+    "select": {
+      "mode": {
+        "name": "Režiim",
+        "state": {
+          "smart": "Smart",
+          "auto": "Automaatne",
+          "manual": "Käsitsi soojustagastus",
+          "night": "Öö",
+          "away": "Kodust ära",
+          "surveillance": "Valve",
+          "timed_extraction": "Ajastatud väljatõmme",
+          "extraction": "Väljatõmme",
+          "intake": "Sissepuhe",
+          "master_slave": "Master-slave vool",
+          "slave_master": "Slave-master vool",
+          "off": "Väljas"
+        }
+      },
+      "humidity_threshold": {
+        "name": "Niiskuse lävi",
+        "state": {
+          "low": "Madal",
+          "medium": "Keskmine",
+          "high": "Kõrge"
+        }
+      },
+      "twilight_sensor": {
+        "name": "Hämarusandur",
+        "state": {
+          "off": "Väljas",
+          "low": "Madal",
+          "high": "Kõrge"
+        }
+      }
+    },
+    "sensor": {
+      "temperature": {
+        "name": "Temperatuur"
+      },
+      "humidity": {
+        "name": "Niiskus"
+      },
+      "filter": {
+        "name": "Filter",
+        "state": {
+          "ok": "Korras",
+          "warning": "Varsti puhastada",
+          "replace": "Puhastada"
+        }
+      },
+      "air_quality": {
+        "name": "Õhukvaliteet",
+        "state": {
+          "very_good": "Väga hea",
+          "good": "Hea",
+          "medium": "Keskmine",
+          "poor": "Halb"
+        }
+      },
+      "active_mode": {
+        "name": "Aktiivne režiim",
+        "state": {
+          "smart": "Smart",
+          "auto": "Automaatne",
+          "manual": "Käsitsi soojustagastus",
+          "night": "Öö",
+          "away": "Kodust ära",
+          "surveillance": "Valve",
+          "timed_extraction": "Ajastatud väljatõmme",
+          "extraction": "Väljatõmme",
+          "intake": "Sissepuhe",
+          "master_slave": "Master-slave vool",
+          "slave_master": "Slave-master vool",
+          "off": "Väljas"
+        }
+      },
+      "air_quality_raw": {
+        "name": "Õhukvaliteedi toorväärtus"
+      },
+      "raw_status": {
+        "name": "Toorolek"
+      }
+    },
+    "button": {
+      "reset_filter": {
+        "name": "Nulli filter"
+      }
+    },
+    "binary_sensor": {
+      "connected": {
+        "name": "Ühendatud"
+      }
+    }
+  }
+}
